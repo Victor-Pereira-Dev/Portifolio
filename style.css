@@ -1,5 +1,23 @@
 body {
   margin: 0;
+  background:
+    radial-gradient(
+      circle at 20% 10%,
+      rgba(255, 255, 255, 0.07),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 55%,
+      rgba(255, 255, 255, 0.05),
+      transparent 45%
+    ),
+    var(--preto-principal);
+  background-size:
+    140% 140%,
+    140% 140%,
+    auto;
+  background-attachment: fixed;
+  animation: deriva 24s ease-in-out infinite alternate;
 }
 
 :root {
@@ -12,7 +30,6 @@ body {
 }
 
 .header {
-  background-color: var(--preto-principal);
   color: white;
   min-height: 15vh;
   display: flex;
@@ -70,7 +87,6 @@ body {
 .body {
   display: flex;
   flex-direction: column;
-  background-color: var(--preto-principal);
   color: white;
   padding: var(--padding-padrao);
   padding-bottom: 80px;
@@ -283,12 +299,13 @@ body {
 }
 
 .footer {
-  background-color: var(--preto-beiradas);
   color: white;
   font-family: var(--fonte-padrao);
   padding: 50px var(--padding-padrao);
   box-sizing: border-box;
   text-align: center;
+  background-color: transparent;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .footer h2 {
@@ -318,7 +335,7 @@ body {
 }
 
 #download button {
-  background-color: var(--preto-principal);
+  background-color: transparent;
   color: white;
   height: 40px;
   display: flex;
